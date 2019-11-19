@@ -13,14 +13,18 @@
                 <linkfile src="../toolchains/aarch64/bin/aarch64-linux-gnu-gdb" dest="build/gdb" />
         </project>
 
-        <!-- linaro-swg gits -->
-        <project path="linux"                 name="linaro-swg/linux.git"                     revision="9823b258b332b4ac98e05fa23448bbc9e937b24c" />
-        <project path="optee_benchmark"      name="linaro-swg/optee_benchmark.git"/>
-        <project path="optee_examples"       name="linaro-swg/optee_examples.git" />
-
         <!-- Misc gits -->
-        <project path="arm-trusted-firmware" name="ARM-software/arm-trusted-firmware.git" revision="023bc019e95ca98687f015074c938941a0546eb7" />
-        <project path="buildroot"            name="buildroot/buildroot.git"               revision="refs/tags/2018.08" clone-depth="1" />
-        <project path="firmware"             name="raspberrypi/firmware.git"              revision="refs/tags/1.20170215" clone-depth="1" />
-        <project path="u-boot"               name="u-boot/u-boot.git"                     revision="aac0c29d4b8418c5c78b552070ffeda022b16949" />
-</manifest>
+        <project name="ARM-software/arm-trusted-firmware.git" path="arm-trusted-firmware" revision="34efb683e32254b8c325ac3071c5776d243a7b99"/>
+  <project name="jbech-linaro/build.git" path="build" revision="14e8e3ab302098e043991458067292c337c0149c" upstream="optee-ftpm">
+    <linkfile dest="build/Makefile" src="qemu.mk"/>
+  </project>
+  <project clone-depth="1" name="buildroot/buildroot.git" path="buildroot" revision="339d550e92ac15de8668f32d66d16f198137006c" upstream="refs/tags/2018.08"/>
+  <project name="jbech-linaro/linux.git" path="linux" revision="81531a35c56add3eebe80f20e2f865275b264d59"/>
+  <project name="jbech-linaro/ms-tpm-20-ref.git" path="ms-tpm-20-ref"  revision="2454dabf3dc8d46908bf8035faa0b2905e7b8530" upstream="ftpm"/>
+  <project name="jbech-linaro/ibmtpm20tss.git" path="ibmtpm20tss" revision="44bcc16816abae86c7780884f8380a7133f97781" upstream="ftpm" />
+  <project name="linaro-swg/optee_benchmark.git" path="optee_benchmark" revision="f0d3263d605d401e9771154ec80c1882ca8abca5" upstream="master"/>
+  <project name="linaro-swg/optee_examples.git" path="optee_examples" revision="9890a50d3c26b377dcb27f5db680018e15a5a3de" upstream="master"/>
+  <project name="linaro-swg/soc_term.git" path="soc_term" revision="5493a6e7c264536f5ca63fe7511e5eed991e4f20"/>
+  <project name="linaro-swg/u-boot.git" path="u-boot" revision="6c35bd586b65d4ff6a86afc6536496cdb8095c3a" upstream="optee"/>
+  <project clone-depth="1" name="qemu/qemu.git" path="qemu" revision="4750e1a888ac3d320607f33b676f299005be98e6" upstream="refs/tags/v3.1.0-rc3"/>
+</manifest></manifest>
