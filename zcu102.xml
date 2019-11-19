@@ -27,4 +27,4 @@
   <project name="linaro-swg/soc_term.git" path="soc_term" revision="5493a6e7c264536f5ca63fe7511e5eed991e4f20"/>
   <project name="linaro-swg/u-boot.git" path="u-boot" revision="6c35bd586b65d4ff6a86afc6536496cdb8095c3a" upstream="optee"/>
   <project clone-depth="1" name="qemu/qemu.git" path="qemu" revision="4750e1a888ac3d320607f33b676f299005be98e6" upstream="refs/tags/v3.1.0-rc3"/>
-</manifest></manifest>
+</manifest>
